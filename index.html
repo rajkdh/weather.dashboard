@@ -9,17 +9,81 @@
 </head>
 <body>
 <script src="./assets/js/script.js"></script>
-<header>
-    <h1>Weather Dashboard</h1>
+<header class="header">
+    <div class="header-title">
+        <h1>Weather Dashboard</h1>
+    </div>
 </header>
-<!--Search city-->
-<div class="search-container">
-    <form id="form">
-        <input id="city-name" type="text" placeholder="Enter a city">
-        <button type="submit">Search</button>
-    </form>
-</div>
 
+<main class="main">
+    <div class="form-container">
+        <!-- search input label -->
+        <form id="search-form">            
+            <label for="search-input">Search for a City:</label>
+            <input type="text" id="search-input" name="search-input">
+            <button type="submit" class="search-button">Submit</button>
+        </form>
+    </div>
+
+    <!-- search history -->
+    <div id="search-history-container">
+
+    </div>
+           
+    <!-- current weather conditions -->
+    <div id="current-weather-container">
+        <!-- current weather title -->
+        <div class="current-title-container">
+            <h2 id="current-title"></h2>
+        </div>
+        <!-- current weather temperature -->
+        <p id="current-temperature"></p>
+        <!-- current weather humidity -->
+        <p id="current-humidity"></p>
+        <!-- current weather wind speed -->
+        <p id="current-wind-speed"></p>
+    </div>
+
+
+                <!-- 5 day forecast -->
+    <div class="future-weather-container">
+                    <!-- 5 day forecast title-->
+        <h2 class="future-weather-title"></h2>
+        <div  class="weather-container">
+             <!-- future day forecard card -->
+            <div class="weather-card">
+                <p class="future-date" id="future-date-1"></p>
+                <p class="future-temp" id="future-temp-1"></p>
+                <p class="future-humidity" id="future-humidity-1"></p>
+            </div>
+
+            <div class="weather-card">
+                <p class="future-date" id="future-date-2"></p>
+                <p class="future-temp" id="future-temp-2"></p>
+                <p class="future-humidity" id="future-humidity-2"></p>
+            </div>
+            
+            <div class="weather-card">
+                <p class="future-date" id="future-date-3"></p>
+                <p class="future-temp" id="future-temp-3"></p>
+                <p class="future-humidity" id="future-humidity-3"></p>
+            </div>
+
+            <div class="weather-card">
+                <p class="future-date" id="future-date-4"></p>
+                <p class="future-temp" id="future-temp-4"></p>
+                <p class="future-humidity" id="future-humidity-4"></p>
+            </div>
+
+            <div class="weather-card">
+                <p class="future-date" id="future-date-5"></p>
+                <p class="future-temp" id="future-temp-5"></p>
+                <p class="future-humidity" id="future-humidity-5"></p>
+            </div>
+
+        </div>
+    </div>
+</main>
 
 </body>
 
