@@ -55,8 +55,9 @@ position: relative;
     border-radius: 5px;
 }
 .current-weather-container p{
-    font-weight: bold;
+    
     font-size: 15px;
+    margin-top: 0;
 
 }
 
@@ -82,7 +83,25 @@ position: relative;
 
 
 /* styling for future weather section */
+.forecast-title{
+    position: relative;
+    left: 250px;
+}
+.future-weather-container{
+    position: relative;
+    left: 250px;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+
+}
 .future-weather-card{
     background-color: lightskyblue;
-    position: relative;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    margin: auto 15px;
+    flex-direction: column;
+    
+
 }
