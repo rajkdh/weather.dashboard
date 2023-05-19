@@ -18,7 +18,7 @@ function displayWeather(data) {
     document.getElementById('current-city').innerHTML = data.name;
     document.getElementById('current-date').innerHTML = dayjs().format('MMMM D, YYYY')
     document.getElementById('current-weather-icon').innerHTML = '<img src="https://openweathermap.org/img/wn/' + data.weather[0].icon + '@2x.png"/>';
-    document.getElementById('current-temp').innerHTML = data.main.temp + ' &deg;';
+    document.getElementById('current-temp').innerHTML = data.main.temp + ' &deg;' + 'C';
     document.getElementById('current-wind').innerHTML = data.wind.speed + " km/h";
     document.getElementById('current-humid').innerHTML = data.main.humidity + ' %';
 

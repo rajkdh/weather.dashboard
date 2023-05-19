@@ -3,6 +3,7 @@ header {
     text-align: center;
     color:#faebd7;
     padding: 1px;
+    width: 100%;
 }
 /* styling for search city section */
 .search-container{
@@ -46,7 +47,39 @@ position: relative;
     position: relative;
     left: 250px;
     bottom: 150px;
+    width: 100%;
+    text-align: left;
+    display:flex;
+    flex-direction: column;
+    padding:15px 25px;
+    border-radius: 5px;
 }
+.current-weather-container p{
+    font-weight: bold;
+    font-size: 15px;
+
+}
+
+.weather-icon img{
+    position: relative;
+    height: 45px;
+
+}
+
+#current-date{
+    font-size: 15px;
+}
+#current-city{
+    font-size: 30px;
+    font-weight:bolder;
+}
+#current-temp{
+    font-size: 20px;
+    position: relative;
+    left: 55px;
+    bottom: 25px;
+}
+
 
 /* styling for future weather section */
 .future-weather-card{
