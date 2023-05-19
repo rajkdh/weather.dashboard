@@ -1,0 +1,55 @@
+header {
+    background-color: blue;
+    text-align: center;
+    color:#faebd7;
+    padding: 1px;
+}
+/* styling for search city section */
+.search-container{
+    background-color: yellow;
+    position: relative;
+    width: 250px;
+    height: 150px;
+}
+.search-form{
+    padding:10px 10px;
+    text-align: center;
+}
+label{
+    font-size: 25px;
+}
+input{
+    height: 25px;
+    width: 200px;
+    margin:10px;
+    border-radius: 4px;
+    border-color: grey;
+}
+.btn{
+width:200px;
+height: 25px;
+background-color: lightblue;
+border-color: lightblue;
+border-radius: 4px;
+color:antiquewhite;
+font-size: 15px;
+font-weight: bold;
+}
+/*styling for search history section */
+.prev-search-container{
+background-color: brown;
+position: relative;
+}
+/* styling for current weather section */
+.current-weather-container{
+    background-color: lightsalmon;
+    position: relative;
+    left: 250px;
+    bottom: 150px;
+}
+
+/* styling for future weather section */
+.future-weather-card{
+    background-color: lightskyblue;
+    position: relative;
+}
