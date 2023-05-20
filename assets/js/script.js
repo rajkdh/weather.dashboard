@@ -1,18 +1,15 @@
-var key = "1afe52a96aafad62ee177005ae870f46";
+var key = "161b51b7bfb7bc374ecd556438a97553";
 var city;
 //var forcastURL = 'https://api.openweathermap.org/data/2.5/forecast?q=' + city + '&appid=' + key key + '&units=metric';
 
-function currentWeather( city ) {
+function weather( city ) {
     var queryURL = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=' + key + '&units=metric'
-    fetch(queryURL)
-    .then(function(response) { return response.json() })
-    .then(function(data) {
-        displayWeather(data);
-    })
-    .catch(function() {
+    var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&cnt=5&appid=" + key + '&units=metric'
+    fetch(queryURL).then(function(response) { return response.json() });
+    fetch(forecastURL).then(function(response) { return response.json() });
 
-    });  
-}
+    displayWeather(data);  
+};
 function displayWeather(data) {
    
     document.getElementById('current-city').innerHTML = data.name;
@@ -22,11 +19,10 @@ function displayWeather(data) {
     document.getElementById('current-wind').innerHTML = data.wind.speed + " km/h";
     document.getElementById('current-humid').innerHTML = data.main.humidity + ' %';
 
-
 }
 
 
 window.onload = function() {
-    currentWeather('Toronto')
+    weather('Toronto')
 
 }
