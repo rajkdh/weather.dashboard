@@ -1,6 +1,17 @@
 const key = "161b51b7bfb7bc374ecd556438a97553";
-var city;
-var searchHistory=[];
+var city = 'Toronto';
+
+var searchFormEl = document.getElementById('search-form');
+var searchInputEl = document.getElementById('search-input');
+var searchBtnEl = document.getElementById('search-button');
+var searchedList = []// empty array to store searched cities
+
+//initalizeHistory();
+//showClear();
+
+
+
+
 
 function displayDates(date){
     day = date.split(" ")
@@ -38,7 +49,7 @@ function getForecast(city) {
     var dayFour = data['list']['33']['dt_txt'];
     var dayFive = data['list']['39']['dt_txt'];
 
-    document.getElementById('future-date-1').innerHTML = displayDates(dayOne);//update
+    document.getElementById('future-date-1').innerHTML = displayDates(dayOne);
     document.getElementById('future-temp-1').innerHTML = data['list']['8']['main']['temp'] + ' &#8451'
     document.getElementById('future-weather-icon-1').innerHTML = `<img src="https://openweathermap.org/img/wn/` + data['list']['8']['weather']['0']['icon'] + `@2x.png">`;
     document.getElementById('future-wind-1').innerHTML = data['list']['8']['wind']['speed'] + ' km/h';
@@ -74,8 +85,7 @@ function getForecast(city) {
       
 
 
-getWeather('Vancouver');
- getForecast('Vancouver');
+
 
 
 
