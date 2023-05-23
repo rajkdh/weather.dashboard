@@ -26,37 +26,59 @@ function getForecast(city) {
     return response.json();
   })
   .then((data) => {
+    var dayOne = data['list']['8']['dt_txt'];
+    var dayTwo = data['list']['17']['dt_txt'];
+    var dayThree = data['list']['25']['dt_txt'];
+    var dayFour = data['list']['33']['dt_txt'];
+    var dayFive = data['list']['39']['dt_txt'];
 
-    document.getElementById('future-date-1').innerHTML = data['list']['8']['dt_txt'];
+    document.getElementById('future-date-1').innerHTML = displayDates(dayOne);//update
     document.getElementById('future-temp-1').innerHTML = data['list']['8']['main']['temp'] + ' &#8451'
     document.getElementById('future-weather-icon-1').innerHTML = `<img src="https://openweathermap.org/img/wn/` + data['list']['8']['weather']['0']['icon'] + `@2x.png">`;
     document.getElementById('future-wind-1').innerHTML = data['list']['8']['wind']['speed'] + ' km/h';
     document.getElementById('future-humid-1').innerHTML = data['list']['8']['main']['humidity'] + ' %';
 
-    document.getElementById('future-date-2').innerHTML = data['list']['17']['dt_txt'];
+    document.getElementById('future-date-2').innerHTML = displayDates(dayTwo);
     document.getElementById('future-temp-2').innerHTML = data['list']['17']['main']['temp'] + ' &#8451'
     document.getElementById('future-weather-icon-2').innerHTML = `<img src="https://openweathermap.org/img/wn/` + data['list']['17']['weather']['0']['icon'] + `@2x.png">`;
     document.getElementById('future-wind-2').innerHTML = data['list']['17']['wind']['speed'] + ' km/h';
     document.getElementById('future-humid-2').innerHTML = data['list']['17']['main']['humidity'] + ' %';
 
-    document.getElementById('future-date-3').innerHTML = data['list']['25']['dt_txt'];
+    document.getElementById('future-date-3').innerHTML = displayDates(dayThree);
     document.getElementById('future-temp-3').innerHTML = data['list']['25']['main']['temp'] + ' &#8451'
     document.getElementById('future-weather-icon-3').innerHTML = `<img src="https://openweathermap.org/img/wn/` + data['list']['25']['weather']['0']['icon'] + `@2x.png">`;
     document.getElementById('future-wind-3').innerHTML = data['list']['25']['wind']['speed'] + ' km/h';
     document.getElementById('future-humid-3').innerHTML = data['list']['25']['main']['humidity'] + ' %';
 
-    document.getElementById('future-date-4').innerHTML = data['list']['33']['dt_txt'];
+    document.getElementById('future-date-4').innerHTML = displayDates(dayFour);
     document.getElementById('future-temp-4').innerHTML = data['list']['33']['main']['temp'] + ' &#8451'
     document.getElementById('future-weather-icon-4').innerHTML = `<img src="https://openweathermap.org/img/wn/` + data['list']['33']['weather']['0']['icon'] + `@2x.png">`;
     document.getElementById('future-wind-4').innerHTML = data['list']['33']['wind']['speed'] + ' km/h';
     document.getElementById('future-humid-4').innerHTML = data['list']['33']['main']['humidity'] + ' %';
 
-    document.getElementById('future-date-5').innerHTML = data['list']['39']['dt_txt'];
+    document.getElementById('future-date-5').innerHTML = displayDates(dayFive);
     document.getElementById('future-temp-5').innerHTML = data['list']['39']['main']['temp'] + ' &#8451'
     document.getElementById('future-weather-icon-5').innerHTML = `<img src="https://openweathermap.org/img/wn/` + data['list']['39']['weather']['0']['icon'] + `@2x.png">`;
     document.getElementById('future-wind-5').innerHTML = data['list']['39']['wind']['speed'] + ' km/h';
     document.getElementById('future-humid-5').innerHTML = data['list']['39']['main']['humidity'] + ' %';
-    });
+
+    var test = data['list']['8']['dt_txt']    
+
+    function displayDates(date){
+            day = date.split(" ")
+            return day[0]
+        }
+   
+    displayDates(test)
+    
+  
+
+   })
+   
+  
+
+       
+    
    
     
 };
