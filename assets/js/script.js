@@ -2,6 +2,10 @@ const key = "161b51b7bfb7bc374ecd556438a97553";
 var city;
 var searchHistory=[];
 
+function displayDates(date){
+    day = date.split(" ")
+    return day[0]
+}
 
 function getWeather(city) {
     const weatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`;
@@ -10,6 +14,8 @@ function getWeather(city) {
         return response.json();
     })
     .then((data) => {
+        
+        document.getElementById('current-date').innerHTML = dayjs().format('MMMM DD, YYYY');
         document.getElementById('current-city').innerHTML = data.name;
         document.getElementById('current-weather-icon').innerHTML = `<img src="https://openweathermap.org/img/wn/` + data.weather[0].icon + `@2x.png">`;
         document.getElementById('current-temp').innerHTML = data.main.temp + ' &#8451';
@@ -61,32 +67,15 @@ function getForecast(city) {
     document.getElementById('future-weather-icon-5').innerHTML = `<img src="https://openweathermap.org/img/wn/` + data['list']['39']['weather']['0']['icon'] + `@2x.png">`;
     document.getElementById('future-wind-5').innerHTML = data['list']['39']['wind']['speed'] + ' km/h';
     document.getElementById('future-humid-5').innerHTML = data['list']['39']['main']['humidity'] + ' %';
-
-    var test = data['list']['8']['dt_txt']    
-
-    function displayDates(date){
-            day = date.split(" ")
-            return day[0]
-        }
-   
-    displayDates(test)
-    
   
-
-   })
-   
   
-
-       
-    
-   
-    
+       });   
 };
       
 
 
-getWeather('Toronto');
- getForecast('Toronto');
+getWeather('Vancouver');
+ getForecast('Vancouver');
 
 
 
