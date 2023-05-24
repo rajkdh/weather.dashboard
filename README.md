@@ -40,13 +40,13 @@ This application, with a simple layout, allowes users to check the current weath
 <!-- USAGE EXAMPLES -->
 ## Usage
 >Demo:
-![image](https://user-images.githubusercontent.com/112664790/236599286-f524365f-4b9f-4115-a1a5-bed2795e09b1.png)
+![image](https://github.com/rajkdh/weather.dashboard/assets/112664790/d46ced17-b21e-40c5-8d7f-69ca17ffa04d)
 
 <br>
 <br>
 
 >After entering city: 
-![image](https://user-images.githubusercontent.com/112664790/236599335-64bdf70c-84b4-4c66-bd79-945cbcf743b4.png)
+![image](https://github.com/rajkdh/weather.dashboard/assets/112664790/d967a5c5-8e7e-403e-86a8-422569f77797)
 
 <br>
 <br>
