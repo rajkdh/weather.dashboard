@@ -1,8 +1,9 @@
 body {
     font-family: 'Lora', serif;
+    background-color: #fefae0;
 }
 header {
-    background-color: blue;
+    background-color: #d4a373;
     text-align: center;
     color:#faebd7;
     padding: 1px;
@@ -10,7 +11,7 @@ header {
 }
 /* styling for search city section */
 .search-container{
-    background-color: yellow;
+    background-color: #e9edc9;
     position: relative;
     width: 250px;
     height: 150px;
@@ -33,12 +34,17 @@ input{
 .btn{
 width:200px;
 height: 25px;
-background-color: lightblue;
-border-color: lightblue;
+background-color: #ccd5ae;
+border-color: #ccd5ae;
 border-radius: 4px;
-color:antiquewhite;
+color:white;
 font-size: 15px;
 font-weight: bold;
+cursor: pointer;
+opacity: 0.8;
+}
+.btn:hover {
+    opacity: 1;
 }
 /*styling for search history section */
 .prev-search-container{
@@ -47,7 +53,7 @@ position: relative;
 }
 /* styling for current weather section */
 .current-weather-container{
-    background-color: lightsalmon;
+    background-color: #fefae0;
     position: relative;
     left: 250px;
     bottom: 150px;
