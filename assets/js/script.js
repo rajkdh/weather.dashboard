@@ -3,30 +3,33 @@ var searchFormEl = document.getElementById('search-form');
 var searchInputEl = document.getElementById('search-input');
 var searchBtnEl = document.getElementById('search-button');
 var searchedList = [];// empty array to store searched cities
+var weatherDisplay = document.getElementById('weather-container');
 var city = 'Toronto';
 
 
 
-
+searchHandler();
 
 
 function searchHandler() {
 
 searchFormEl.addEventListener("submit", (e) => {
     e.preventDefault();
-    
+
     if(searchInputEl.value ==""){
         alert("Please enter a city");
     } else {
         city = `${searchInputEl.value}`;
-         console.log(city);
+        
         getForecast(city);
         getWeather(city);
-    } 
+        weatherDisplay.removeAttribute('class', 'hide');
+   
+    }  
 })
+
 };
 
-searchHandler();
 
 
 
