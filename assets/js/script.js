@@ -1,13 +1,34 @@
 const key = "161b51b7bfb7bc374ecd556438a97553";
-var city = 'Toronto';
-
 var searchFormEl = document.getElementById('search-form');
 var searchInputEl = document.getElementById('search-input');
 var searchBtnEl = document.getElementById('search-button');
-var searchedList = []// empty array to store searched cities
+var searchedList = [];// empty array to store searched cities
+var city = 'Toronto';
 
-//initalizeHistory();
-//showClear();
+
+
+
+
+
+function searchHandler() {
+
+searchFormEl.addEventListener("submit", (e) => {
+    e.preventDefault();
+    
+    if(searchInputEl.value ==""){
+        alert("Please enter a city");
+    } else {
+        city = `${searchInputEl.value}`;
+         console.log(city);
+        getForecast(city);
+        getWeather(city);
+    } 
+})
+};
+
+searchHandler();
+
+
 
 
 
@@ -16,7 +37,7 @@ var searchedList = []// empty array to store searched cities
 function displayDates(date){
     day = date.split(" ")
     return day[0]
-}
+};
 
 function getWeather(city) {
     const weatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`;
@@ -82,6 +103,12 @@ function getForecast(city) {
   
        });   
 };
+
+
+
+
+
+
       
 
 
